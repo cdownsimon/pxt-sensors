@@ -87,19 +87,8 @@ namespace sensors {
         const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
 
         switch (unit) {
-            case PingUnit.Centimeters: 
-                if (d / 58 < 2){
-                    return 9999;
-                }else{
-                    return d / 58;
-                }
-            case PingUnit.Inches: 
-                if (d / 148 < 0.8){
-                    return 9999;
-                }
-                else{
-                    return d / 148;
-                }
+            case PingUnit.Centimeters: return d / 58;
+            case PingUnit.Inches: return d / 148;
             default: return d;
         }
     }
