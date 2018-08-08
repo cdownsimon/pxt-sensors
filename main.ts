@@ -57,9 +57,7 @@ namespace sensors {
         //% block="cm"
         Centimeters,
         //% block="inches"
-        Inches,
-        //% block="μs"
-        MicroSeconds
+        Inches
     }
 
     export enum LEDType {
