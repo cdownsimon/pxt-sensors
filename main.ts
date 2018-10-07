@@ -84,7 +84,7 @@ namespace sensors {
         // read pulse
         const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
 
-        if (d < 0){
+        if (d < 2){
             return 99999;
         }
 
