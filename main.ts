@@ -91,11 +91,11 @@ namespace sensors {
             case PingUnit.Inches: dis =  d / 148;
             default: dis = d;
 
-        if (dis < 0.8){
-            return 0;
-        }else{
-            return dis;
-        }
+    //    if (dis < 0.8){
+    //        return 0;
+    //    }else{
+    //        return dis;
+    //    }
 
         }
     }
