@@ -84,19 +84,10 @@ namespace sensors {
         // read pulse
         const d = pins.pulseIn(echo, PulseValue.High, maxCmDistance * 58);
 
-        let dis = 0;
-
         switch (unit) {
             case PingUnit.Centimeters: dis =  d / 58;
             case PingUnit.Inches: dis =  d / 148;
             default: dis = d;
-
-    //    if (dis < 0.8){
-    //        return 0;
-    //    }else{
-    //        return dis;
-    //    }
-
         }
     }
     //% blockId=RGBLight block="set RGB type:common %myType|red pin %RedPin|green pin %GreenPin|blue pin %BluePin|value of red(0~255) %RedValue|value of green(0~255) %GreenValue|value of blue(0~255) %BlueValue" blockExternalInputs=false
